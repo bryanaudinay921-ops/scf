@@ -43,7 +43,6 @@ luaCode = string.gsub(luaCode, "\r", "")
 -- Exécution du vrai code reçu
 local loadedScript, err = loadstring(luaCode)
 if loadedScript then
-    print("Succès ! Le serveur a renvoyé le script et Delta l'exécute.")
     loadedScript()
 else
     warn("Erreur de syntaxe Lua : " .. tostring(err))
